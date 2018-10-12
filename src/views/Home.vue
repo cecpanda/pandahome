@@ -6,34 +6,45 @@
       </el-carousel-item>
     </el-carousel>
     <h2 class='title'>
-      全过程的优质服务，每一环的用心打造。
+      用心锻造每一环节，提供我们最优质的服务。
     </h2>
-    <el-row class='icon-wrapper'>
-      <el-col :span='4' :offset='2'>
+    <transition
+      name='icon-desc'
+      enter-active-class='animated bounceInLeft'
+      leave-active-class='animated bounceOutRight'
+    >
+      <h5 class='icon-desc' v-show='show'>
+        {{ iconDesc }}
+      </h5>
+    </transition>
+
+    <el-row>
+      <el-col :span='4' :offset='2' class='icon-wrapper' @mouseenter.native='handleSj'
+      >
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-sheji1"></use>
         </svg>
         <h5 class='icon-text'>设计</h5>
       </el-col>
-      <el-col :span='4'>
+      <el-col :span='4' class='icon-wrapper' @mouseenter.native='handleKf'>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-daima"></use>
         </svg>
         <h5 class='icon-text'>开发</h5>
       </el-col>
-      <el-col :span='4'>
+      <el-col :span='4' class='icon-wrapper' @mouseenter.native='handleFb'>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-fabu"></use>
         </svg>
         <h5 class='icon-text'>发布</h5>
       </el-col>
-      <el-col :span='4'>
+      <el-col :span='4' class='icon-wrapper' @mouseenter.native='handleJk'>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-jiankong"></use>
         </svg>
         <h5 class='icon-text'>监控</h5>
       </el-col>
-      <el-col :span='4'>
+      <el-col :span='4' class='icon-wrapper' @mouseenter.native='handleWh'>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-weihu"></use>
         </svg>
@@ -46,7 +57,51 @@
 <script>
 export default {
   name: 'home',
-  components: {
+  data () {
+    return {
+      iconDesc: '我们伴您成功',
+      show: true
+    }
+  },
+  methods: {
+    handleSj () {
+      this.show = false
+      setTimeout(() => {
+        this.iconDesc = '设计有品位的网站，与您优质的产品相得益彰，第一印象脱颖而出。'
+        this.show = true
+      }, 300)
+    },
+    handleKf () {
+      this.show = false
+      setTimeout(() => {
+        this.iconDesc = '编写高质量的代码，即使在用户看不到的地方，我们同样精益求精。'
+        this.show = true
+      }, 300)
+    },
+    handleFb () {
+      this.show = false
+      setTimeout(() => {
+        this.iconDesc = '发布稳健测试版本，域名空间备案一条龙服务，免去所有后顾之忧。'
+        this.show = true
+      }, 300)
+    },
+    handleJk () {
+      this.show = false
+      setTimeout(() => {
+        this.iconDesc = '监测网站访问流量，每月寄送详细的数据报表，倾力挖掘潜在商机。'
+        this.show = true
+      }, 300)
+    },
+    handleWh () {
+      this.show = false
+      setTimeout(() => {
+        this.iconDesc = '提供后续维护服务，让您既安心又放心。'
+        this.show = true
+      }, 300)
+    }
+  },
+  mounted () {
+    // this.$refs.sheji.addEventListener('mouseover', this.handleMouseover)
   }
 }
 </script>
@@ -54,7 +109,6 @@ export default {
 <style lang='stylus'>
 .home
   width 100%
-  padding-top 55px
   // background linear-gradient(to bottom, #99a9bf, #d3dce6)
   // background #99a9bf
 .el-carousel
@@ -74,7 +128,14 @@ export default {
   height 8px
   box-shadow 3px 3px 5px #696D71
 .title
+  font-size 1.8em
   text-align center
+  color #4691DE
+  text-shadow 0px 2px 2px #727981
+.icon-desc
+  text-align center
+  color #F5BC35
+  font-size 1em
 .icon
   width 5em
   height 5em
@@ -89,6 +150,7 @@ export default {
     display block
     margin 1.5em auto
   .icon-text
-    font-size 1.5em
+    font-size 1.2em
     text-align center
+    color #0F7EAE
 </style>
