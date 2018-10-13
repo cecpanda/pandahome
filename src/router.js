@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Star from './views/Star.vue'
+// import Star from './views/Star.vue'
+import Snow from './views/Snow.vue'
 
 Vue.use(Router)
 
@@ -25,7 +26,7 @@ export default new Router({
     {
       path: '/star',
       name: 'star',
-      component: Star
+      component: Snow
     }
   ]
 })

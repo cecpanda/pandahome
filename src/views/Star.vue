@@ -14,8 +14,8 @@ export default {
       num: 500,
       stars: [],
       index: 0,
-      width: document.body.offsetWidth,
-      height: document.body.offsetHeight
+      width: window.innerWidth,
+      height: window.innerHeight
     }
   },
   methods: {
