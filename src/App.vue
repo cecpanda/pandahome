@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Snow class='snow'/>
     <Header :class="{scroll: scroll}"/>
     <div class='main'>
       <router-view/>
@@ -11,6 +12,7 @@
 <script>
 import Header from './views/Header'
 import Footer from './views/Footer'
+import Snow from './views/Snow'
 
 export default {
   name: 'App',
@@ -32,7 +34,8 @@ export default {
   },
   components: {
     Header,
-    Footer
+    Footer,
+    Snow
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
@@ -51,9 +54,15 @@ body
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  // background url('./assets/ludeng.jpg')
+  // background-size 100% 100%
   .main
     min-height 500px
     padding-top 58px
 .scroll
   box-shadow 0px 3px 5px #696D71
+  opacity 0.8
+.snow
+  z-index -1
+  position fixed
 </style>

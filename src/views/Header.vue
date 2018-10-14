@@ -1,16 +1,17 @@
 <template>
   <div class="header">
+    <Logo/>
     <el-menu
       :default-active="activeIndex"
       class="el-menu"
       mode="horizontal"
       @select="handleSelect"
-      background-color='#99a9bf'
-      text-color='#fff'
-      active-text-color='#5C5E60'
+      background-color='#667186'
+      text-color='#BFD1E3'
+      active-text-color='#fff'
       router
     >
-      <el-menu-item index="/">Q蛋工作室</el-menu-item>
+      <el-menu-item index="/">首页</el-menu-item>
       <el-menu-item index="2">案例</el-menu-item>
       <el-menu-item index="3">关于</el-menu-item>
       <el-menu-item index="/star">星空</el-menu-item>
@@ -19,6 +20,8 @@
 </template>
 
 <script>
+import Logo from './Logo.vue'
+
 export default {
   name: 'Header',
   data () {
@@ -29,6 +32,9 @@ export default {
   methods: {
     handleSelect () {
     }
+  },
+  components: {
+    Logo
   }
 }
 </script>
@@ -39,6 +45,7 @@ export default {
   width 100%
   position fixed
   // background linear-gradient(to bottom right, #8BBDEF, #2475C6)
+  opacity 0.5
   .el-menu
     border none
     padding-left 70%

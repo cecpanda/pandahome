@@ -109,6 +109,7 @@ export default {
 <style lang='stylus'>
 .home
   width 100%
+  opacity 0.7
   // background linear-gradient(to bottom, #99a9bf, #d3dce6)
   // background #99a9bf
 .el-carousel
@@ -130,11 +131,11 @@ export default {
 .title
   font-size 1.8em
   text-align center
-  color #4691DE
+  color #fff
   text-shadow 0px 2px 2px #727981
 .icon-desc
   text-align center
-  color #F5BC35
+  color #CBDBEB
   font-size 1em
 .icon
   width 5em

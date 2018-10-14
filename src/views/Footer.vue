@@ -18,6 +18,7 @@ export default {
   // margin-top 50px
   padding 50px 0
   background linear-gradient(to bottom, #d3dce6, #99a9bf)
+  opacity 0.7
   hr
     width 50%
     background #8FBAE7
