@@ -6,7 +6,7 @@
       </el-carousel-item>
     </el-carousel>
     <h2 class='title'>
-      用心锻造每一环节，提供我们最优质的服务。
+      用心锻造每一环节 提供我们最优质的服务
     </h2>
     <transition
       name='icon-desc'
@@ -109,7 +109,6 @@ export default {
 <style lang='stylus'>
 .home
   width 100%
-  opacity 0.7
   // background linear-gradient(to bottom, #99a9bf, #d3dce6)
   // background #99a9bf
 .el-carousel
@@ -117,6 +116,7 @@ export default {
   margin-bottom 80px
   padding-bottom 20px
   box-shadow 0px 5px 5px #696D71
+  opacity 0.8
 .el-carousel__item
   box-shadow 3px 3px 5px #696D71
   h3
@@ -128,15 +128,16 @@ export default {
 .el-carousel__button
   height 8px
   box-shadow 3px 3px 5px #696D71
+.content
 .title
-  font-size 1.8em
+  font-size 2em
   text-align center
-  color #fff
-  text-shadow 0px 2px 2px #727981
+  color #C9CC0F
+  text-shadow 0px 2px 2px #fff
 .icon-desc
   text-align center
-  color #CBDBEB
-  font-size 1em
+  color #BFD1E3
+  font-size 1.1em
 .icon
   width 5em
   height 5em
@@ -153,5 +154,5 @@ export default {
   .icon-text
     font-size 1.2em
     text-align center
-    color #0F7EAE
+    color #000
 </style>

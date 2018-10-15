@@ -54,17 +54,17 @@ export default {
         let sf = await this.init()
         this.sfs.push(sf)
       }
-      let bg = new zrender.Image({
-        style: {
-          image: require('../assets/ludeng.jpg'),
-          x: 0,
-          y: 0,
-          width: this.width,
-          height: this.height,
-          opacity: 0.6
-        }
-      })
-      this.zr.add(bg)
+      // let bg = new zrender.Image({
+      //   style: {
+      //     image: require('../assets/ludeng.jpg'),
+      //     x: 0,
+      //     y: 0,
+      //     width: this.width,
+      //     height: this.height,
+      //     opacity: 0.6
+      //   }
+      // })
+      // this.zr.add(bg)
       for (let sf of this.sfs) {
         let i = new zrender.Star({
           draggable: true,
@@ -139,11 +139,5 @@ export default {
 </script>
 
 <style lang='stylus'>
-.snow
-  z-index -10
-  position absolute
-  // margin 20px 0
-  // border 1px solid #000
-  // background url('../assets/snow.jpg')
-  // background-size 100% 100%
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div ref='logo' id='logo'></div>
+  <div ref='logo' id='logo' title='可讴工作室'></div>
 </template>
 
 <script>
@@ -19,17 +19,18 @@ export default {
       },
       style: {
         fill: '#fff',
-        stroke: '#fff'
+        stroke: '#fff',
+        shadowBlur: 8,
+        shadowColor: '#000',
+        shadowOffsetX: 5,
+        shadowOffsetY: 5
       },
       origin: [25, 25],
-      rotation: 0
+      rotation: 1
     })
-    // logo.animate('rotation', true)
-    //   .when(2000, 100)
-    //   .start()
     logo.animateTo({
-      rotation: 10
-    }, 10000)
+      rotation: 500
+    }, 300000)
     zr.add(logo)
   }
 }
@@ -39,6 +40,6 @@ export default {
 #logo
   position fixed
   top 0
-  left 0
+  left 10
   z-index 10
 </style>

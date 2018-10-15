@@ -2,7 +2,7 @@
   <div class="footer">
     <hr>
     <div class="name">
-      Q蛋工作室
+      可讴工作室
     </div>
   </div>
 </template>
@@ -15,17 +15,17 @@ export default {
 
 <style lang='stylus'>
 .footer
-  // margin-top 50px
+  margin-top 80px
   padding 50px 0
   background linear-gradient(to bottom, #d3dce6, #99a9bf)
   opacity 0.7
   hr
     width 50%
-    background #8FBAE7
-    height 5px
+    background #000
+    height 8px
   .name
     text-align center
     font-size 30px
-    color #fff
-    text-shadow 3px 3px 3px #000
+    color #000
+    text-shadow 3px 3px 3px #fff
 </style>
