@@ -6,7 +6,7 @@
       mode="horizontal"
       @select="handleSelect"
       background-color='#99a9bf'
-      text-color='#BFD1E3'
+      text-color='#fff'
       active-text-color='#fff'
       router
     >

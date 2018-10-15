@@ -59,7 +59,7 @@ export default {
               id: 3.1,
               name: '中电熊猫停机管理系统',
               img: require('../assets/cases/panda.jpeg'),
-              qr: '',
+              qr: require('../assets/cases/panda.jpeg'),
               active: 'img'
             }
           ]
